@@ -11,9 +11,11 @@ import java.io.PrintWriter;
  */
 public class IdentityTheft {
     
-    int fields = 14;
-    String[] secretStuff = new String[fields];
-    String[] secretStuffQuestionaire = new String[fields];
+    static int fields = 14;
+    static String[] secretStuff = new String[fields];
+    static String[] secretStuffQuestionaire = new String[fields];
+    
+    Prompter WhiteHat = new Prompter();
     
     public IdentityTheft() throws IOException{
        
@@ -34,16 +36,31 @@ public class IdentityTheft {
         secretStuffQuestionaire[8] = "Please enter the first three digits of your SSN";
         secretStuffQuestionaire[13] = "Please enter the middle two digits of your SSN";
         
+    }
+    
+    public void AskQuestions() throws IOException{
+        //prompt the user for input
         for(int i = 0; i < fields; i++){
             
-            Prompter WhiteHat = new Prompter(secretStuffQuestionaire[i], i);
+            WhiteHat.getData(secretStuffQuestionaire[i], i);
             
         }
-        
+    }
+    
+    public void writeDownAnswers() throws IOException{
         //Make a file output system
         
-        FileWriter fw = new FileWriter(new File("SecretStuff.txt"));
+        FileWriter fw = new FileWriter(new File(secretStuff[2] + "_SecretStuff.txt"));
         PrintWriter pw = new PrintWriter(fw);
+        
+        //Print out the secret stuff to a file
+        for(int i = 1; i < fields; i++){
+            pw.println(secretStuff[i]);
+        }
+        
+        //close the objects
+        fw.close();
+        pw.close();
         
     }
     
