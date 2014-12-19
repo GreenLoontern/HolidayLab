@@ -6,18 +6,22 @@
 
 package holidayprojectlab;
 
+import java.io.IOException;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author 13804
  */
-public class Prompter extends JOptionPane{
+public class Prompter{
     
-    IdentityTheft thing = new IdentityTheft();
-    
-    public Prompter(String displayMessage, int i){
-        thing.secretStuff[i] = Prompter.showInputDialog(displayMessage);
+    public Prompter(String displayMessage, int i) throws IOException{
+        
+        IdentityTheft thing = new IdentityTheft();
+        
+        JOptionPane pane = new JOptionPane();
+        
+        thing.secretStuff[i] = pane.showInputDialog(displayMessage);
         
         
     }
