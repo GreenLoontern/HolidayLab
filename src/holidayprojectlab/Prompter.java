@@ -14,7 +14,7 @@ public class Prompter{
     public void getData(String displayMessage, int i) throws IOException{
        
         if(i == 0){
-            pane.showMessageDialog(pane, displayMessage, displayMessage, JOptionPane.PLAIN_MESSAGE);
+            pane.showMessageDialog(null, displayMessage, displayMessage, JOptionPane.PLAIN_MESSAGE);
         }else{
             IdentityTheft.secretStuff[i] = pane.showInputDialog(displayMessage);
         }
