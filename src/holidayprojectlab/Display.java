@@ -1,6 +1,5 @@
 package holidayprojectlab;
 
-import java.awt.Canvas;
 import javax.swing.JFrame;
 
 /**
@@ -13,7 +12,7 @@ public class Display extends JFrame{
         
         super("Non-denominational Traditional Winter Holiday Lab");
 
-		setSize(1200, 1000);
+		setSize(1000, 800);
                 
                 setLocationRelativeTo(null);
 
