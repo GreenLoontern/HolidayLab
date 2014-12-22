@@ -22,6 +22,8 @@ public class HolidayProjectLab {
         BlackHat.AskQuestions();
         BlackHat.writeDownAnswers();
         
+        //Print out stuff
+        Display beretGuy = new Display();
     }
     
 }
