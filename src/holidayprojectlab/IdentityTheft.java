@@ -21,7 +21,7 @@ public class IdentityTheft {
        
         
         //Fill the arrays with stuff
-        secretStuffQuestionaire[0] = "Welcome to the Non-Denominational Traditional Winter Holiday Lab!";
+        secretStuffQuestionaire[0] = "Welcome to the Non-Denominational Traditional Winter Holiday Lab!\n Please provide us with some personal information in order to\n personalize your experience!";
         secretStuffQuestionaire[1] = "Please enter your first name";
         secretStuffQuestionaire[2] = "Please enter your last name";
         secretStuffQuestionaire[3] = "Please enter your middle initial";
